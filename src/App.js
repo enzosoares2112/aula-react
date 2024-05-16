@@ -1,13 +1,19 @@
-import  './logo.svg';
-import './App.css';
+import { ToastContainer } from "react-toastify";
+import "./App.css";
+
+import "react-toastify/dist/ReactToastify.css";
+import "font-awesome/css/font-awesome.css"
+import { RouteApp } from "./route";
+import  CarrinhoContextProvider  from "./hooks/CarrinhoContext.js";
 
 function App() {
   return (
-    <div className="App">
-        <p>
-         hello world
-        </p>
-    </div>
+    <>
+      <CarrinhoContextProvider>
+        <ToastContainer />
+        <RouteApp />
+      </CarrinhoContextProvider>
+    </>
   );
 }
 
